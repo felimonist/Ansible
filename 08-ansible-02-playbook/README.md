@@ -48,7 +48,7 @@ https://github.com/felimonist/Ansible/tree/main/08-ansible-02-playbook/playbook
 4. Tasks должны: скачать дистрибутив нужной версии, выполнить распаковку в выбранную директорию, установить vector.
 5. Запустите `ansible-lint site.yml` и исправьте ошибки, если они есть.
 
-![image](https://https://github.com/felimonist/Ansible/tree/main/08-ansible-02-playbook/img/lint.JPG)
+![image](https://github.com/felimonist/Ansible/blob/main/08-ansible-02-playbook/img/lint.JPG)
 
 6. Попробуйте запустить playbook на этом окружении с флагом `--check`.
 
