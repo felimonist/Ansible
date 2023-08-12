@@ -156,7 +156,7 @@ clickhouse-01              : ok=10   changed=1    unreachable=0    failed=0    s
 
 9. Подготовьте README.md-файл по своему playbook. В нём должно быть описано: что делает playbook, какие у него есть параметры и теги.
 
-[playbook](https://github.com/felimonist/Ansible/tree/main/08-ansible-02-playbook/playbook/site.yml) Playbook предназначен для инсталяции Clickhouse "22.3.10.22" и Vector 0.30.0.
+[Playbook](https://github.com/felimonist/Ansible/tree/main/08-ansible-02-playbook/playbook/site.yml) предназначен для инсталяции Clickhouse "22.3.10.22" и Vector 0.30.0.
 
 ```
 Задачи содержащиеся в playbook для установки clickhouse.
