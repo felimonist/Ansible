@@ -187,6 +187,6 @@ clickhouse-01              : ok=10   changed=1    unreachable=0    failed=0    s
  
 10. Готовый playbook выложите в свой репозиторий, поставьте тег `08-ansible-02-playbook` на фиксирующий коммит, в ответ предоставьте ссылку на него.
 
-[Commit tag 08-ansible-02-playbook ](https://github.com/felimonist/Ansible/commit/58928bf8c10dcb9ee6c56c14859bf30613ca5fbb)
+[Commit tag 08-ansible-02-playbook ](https://github.com/felimonist/Ansible/commit/40afeea28fd06704e865a1c1607a298de02f808b)
 
 
