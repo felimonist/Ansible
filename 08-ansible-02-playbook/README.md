@@ -11,7 +11,7 @@ https://github.com/felimonist/Ansible/tree/main/08-ansible-02-playbook/playbook
 
 [prod.yml](https://github.com/felimonist/Ansible/tree/main/08-ansible-02-playbook/playbook/prod.yml)
 
-2. Допишите playbook: нужно сделать ещё один play, который устанавливает и настраивает [vector](https://github.com/felimonist/Ansible/tree/main/08-ansible-02-playbook/playbook/site.yml).
+2. Допишите playbook: нужно сделать ещё один play, который устанавливает и настраивает [vector](https://github.com/felimonist/Ansible/blob/main/08-ansible-02-playbook/playbook/site.yml#L49-L76).
 
 ```
 - name: Install Vector
