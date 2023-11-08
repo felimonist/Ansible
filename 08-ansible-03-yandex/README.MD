@@ -45,11 +45,11 @@
 3. Tasks должны: скачать статику LightHouse, установить Nginx или любой другой веб-сервер, настроить его конфиг для открытия LightHouse, запустить веб-сервер.
 4. Подготовьте свой inventory-файл `prod.yml`.
 
-    <details>
-    <summary> prod.yaml </summary>
+<details>
+<summary> prod.yaml </summary>
 
-    [prod.yaml](playbook/inventory/prod.yml)
-    </details>
+[prod.yaml](https://github.com/felimonist/Ansible/blob/main/08-ansible-03-yandex/Playbook/playbook/inventory/prod.yml)
+</details>
 
 
 5. Запустите `ansible-lint site.yml` и исправьте ошибки, если они есть:
@@ -60,8 +60,8 @@
 
 6. Попробуйте запустить playbook на этом окружении с флагом `--check`.
 
-    <details>
-    <summary> --check </summary>
+<details>
+<summary> --check </summary>
 
 felimonist@feli:~/mnt-homeworks/08-ansible-03-yandex/playbook$ ansible-playbook  -i inventory/prod.yml site.yml --check
 
@@ -146,14 +146,14 @@ PLAY RECAP *********************************************************************
 clickhouse-01              : ok=10   changed=5    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
 lighthouse-03              : ok=8    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
         
-    </details>
+</details>
 
 
 
 7. Запустите playbook на `prod.yml` окружении с флагом `--diff`. Убедитесь, что изменения на системе произведены.
 
-    <details>
-    <summary> --diff </summary>
+<details>
+<summary> --diff </summary>
 felimonist@feli:~/mnt-homeworks/08-ansible-03-yandex/playbook$ ansible-playbook  -i inventory/prod.yml site.yml --diff
    
 PLAY [Install Clickhouse] *********************************************************************************************************************************
@@ -231,13 +231,13 @@ PLAY RECAP *********************************************************************
 clickhouse-01              : ok=9    changed=2    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
 lighthouse-03              : ok=8    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 
-    </details>
+</details>
 
 8. Повторно запустите playbook с флагом `--diff` и убедитесь, что playbook идемпотентен.
 9. Подготовьте README.md-файл по своему playbook. В нём должно быть описано: что делает playbook, какие у него есть параметры и теги:
 
 >Playbook:
-     [site.yml](playbook/site.yml)
+[site.yml](https://github.com/felimonist/Ansible/blob/main/08-ansible-03-yandex/Playbook/playbook/site.yml)
 
 >Данный playbook предназначен для скачивания дистрибутивов clickhouse, vector, lighhouse  их установки на группе хостов clickhouse, lighthouse  указанных в [prod.yml](playbook/inventory/prod.yml)
 >Для установки clickhouse и vector были установлены пакеты версии, указанные в [vars.yml](playbook/group_vars/clickhouse/vars.yml). Из шаблона [templates](playbook/templates) создается конфигурационный файл для загрузки данных в БД. Для запуска lighhouse устанавливается веб-сервер Nginx через apt. На основе шаблона из templates/nginx.conf.j2 формируется конфигурационный файл для запуска веб сервера. В заключении, устанавливается LightHouse, при этом используеться модуль `git` для  клонирования репозитория LightHouse в дерикторию на сервере lighthouse и модуль `template` для применения конфигураций из шаблона lighthouse.conf.j2.
@@ -247,6 +247,7 @@ lighthouse-03              : ok=8    changed=0    unreachable=0    failed=0    s
 > - ansible.builtin.apt
 > - ansible.builtin.pause
 > - ansible.builtin.meta
+> - ansible.builtin.systemd
 > - ansible.builtin.command
 > - ansible.builtin.template 
 > - ansible.builtin.git
