@@ -54,9 +54,9 @@
 
 5. Запустите `ansible-lint site.yml` и исправьте ошибки, если они есть:
 
-```
+
 ![image](https://github.com/felimonist/Ansible/blob/main/08-ansible-03-yandex/img/lint.JPG)
-```
+
 
 6. Попробуйте запустить playbook на этом окружении с флагом `--check`.
 
