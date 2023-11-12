@@ -1,0 +1,4 @@
+clickhouse_host: "localhost"
+clickhouse_port: "8123"
+database: "log5"
+table: "log5"
