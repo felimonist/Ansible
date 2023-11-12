@@ -8,7 +8,7 @@
   become: true
   become_user: root
   ansible.builtin.template:
-    src: templates/vector.toml.j2
+    src: "templates/vector.toml.j2"
     dest: /etc/vector/vector.toml
     owner: root
     group: root
